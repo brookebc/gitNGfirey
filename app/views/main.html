@@ -13,24 +13,24 @@
     <img src="images/yeoman.png" alt="I'm Yeoman"><br>
     Always a pleasure scaffolding your apps.
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+<div class="row">
+  <div class="col-md-8">
+    <article ng-repeat="(index, post) in posts">
+      <h4>{{post.title}}</h4>
+      <p>{{post.content}}</p>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
+      <p class="small">{{post.author}} | <a href="#" ng-click="removePost(index)">Remove Post</a></p>
+    </article>
+  </div>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+  <div class="col-md-4">
+  <div class="well">
+  <a class="btn btn-primary" ng-href="#/newPost">New Post</a></div>
+  </div>
 </div>
 
 <div class="footer">
-  <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+  <p><span class="glyphicon glyphicon-heart"></span> By Brooke Casey</p>
 </div>
